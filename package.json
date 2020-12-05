@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve",
+    "start": "webpack serve --mode development",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/ --fix"
   },
@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -40,7 +41,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm format && npm lint"
+      "pre-commit": "npm run format && npm run lint"
     }
   }
 }
